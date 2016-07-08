@@ -6,28 +6,19 @@ import {connect} from 'react-redux';
 
 export const Results = React.createClass({
   mixins: [PureRenderMixin],
-  getPair: function() {
-    return this.props.pair || [];
-  },
-  getVotes: function(entry) {
-    if(this.props.tally && this.props.tally.has(entry)) {
-      return this.props.tally.get(entry);
-    }
-    return 0;
-  },
   render: function() {
     return this.props.winner ?
-      <Winner ref="winner" winner={this.props.winner} /> :
-      <div className="results">
-        <Tally {...this.props} />
-        <div className="management">
-          <button ref="next"
-                  className="next"
-                  onClick={this.props.next}>
-            Next
-          </button>
-        </div>
-      </div>;
+        <Winner ref="winner" winner={this.props.winner} /> :
+        <div className="results">
+          <Tally {...this.props} />
+          <div className="management">
+            <button ref="next"
+                    className="next"
+                    onClick={this.props.next}>
+              Next
+            </button>
+          </div>
+        </div>;
   }
 });
 
