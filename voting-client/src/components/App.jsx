@@ -2,6 +2,9 @@ import React from 'react';
 
 export default React.createClass({
   render: function() {
-    return this.props.children;
+    return React.cloneElement(this.props.children, {
+      pair: pair,
+      tally: tally
+    });
   }
 });
