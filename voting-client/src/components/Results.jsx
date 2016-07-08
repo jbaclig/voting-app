@@ -16,21 +16,18 @@ export const Results = React.createClass({
     return 0;
   },
   render: function() {
-    return <div>
-      {this.props.winner ?
-        <Winner ref="winner" winner={this.props.winner} /> :
-        <div className="results">
-          <Tally {...this.props} />
-          <div className="management">
-            <button ref="next"
-                    className="next"
-                    onClick={this.props.next}>
-              Next
-            </button>
-          </div>
+    return this.props.winner ?
+      <Winner ref="winner" winner={this.props.winner} /> :
+      <div className="results">
+        <Tally {...this.props} />
+        <div className="management">
+          <button ref="next"
+                  className="next"
+                  onClick={this.props.next}>
+            Next
+          </button>
         </div>
-      }
-    </div>;
+      </div>;
   }
 });
 
