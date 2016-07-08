@@ -34,14 +34,10 @@
     "react": "^15.2.0",
     "react-addons-pure-render-mixin": "^15.2.0",
     "react-addons-test-utils": "^15.2.0",
-<<<<<<< HEAD
     "react-dom": "^15.2.0",
     "react-redux": "^4.4.5",
-    "react-router": "^2.0.0",
+    "react-router": "^2.5.2",
     "redux": "^3.5.2",
     "socket.io-client": "^1.4.8"
-=======
-    "react-dom": "^15.2.0"
->>>>>>> parent of 6936638... implement Results page
   }
 }
