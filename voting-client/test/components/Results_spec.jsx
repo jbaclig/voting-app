@@ -37,7 +37,6 @@ describe('Results', () => {
                tally={Map()}
                next={next} />
     );
-    console.log(component.refs);
     Simulate.click(ReactDOM.findDOMNode(component.refs.next));
 
     expect(nextInvoked).to.equal(true);
